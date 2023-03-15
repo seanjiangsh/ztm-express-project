@@ -1,0 +1,24 @@
+### /friends
+GET http://localhost:3000/friends HTTP/1.1
+# ! Note this request URL is treated the same as without tailing "/" in Express
+# ! (${req.baseUrl}${req.url})
+### /friends/
+GET http://localhost:3000/friends/ HTTP/1.1
+### /friends
+GET http://localhost:3000/friends/0/ HTTP/1.1
+### /friends
+GET http://localhost:3000/friends/2 HTTP/1.1
+### /friends
+POST http://localhost:3000/friends/ HTTP/1.1
+content-type: application/json
+
+{ "name": "Marie" }
+
+
+### /messages
+GET http://localhost:3000/messages HTTP/1.1
+### /messages
+POST http://localhost:3000/messages HTTP/1.1
+
+### /whatever
+GET http://localhost:3000/whatever HTTP/1.1
